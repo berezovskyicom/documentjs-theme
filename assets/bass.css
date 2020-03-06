@@ -542,3 +542,16 @@
 
 .display-none{ display:none !important }
 
+.banner {
+  padding: 15px 30px 15px 15px;
+  margin: 0 0 16px;
+  font-size: 16px;
+  border-left: 8px solid #ffe564;
+}
+
+.banner-warning {
+  background-color: rgba(255,229,100,.3);
+  color: #6a737d;
+}
+
+
