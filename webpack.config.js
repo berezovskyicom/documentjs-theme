@@ -1,6 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const isDevelopment = process.env.NODE_ENV === 'development';
+const isDevelopment = true;
 
 module.exports = {
   entry: './assets/scss/index.scss',
@@ -17,15 +17,11 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
-              sourceMap: isDevelopment
+              modules: false
             }
           },
           {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment
-            }
+            loader: 'sass-loader'
           }
         ]
       },
@@ -36,10 +32,7 @@ module.exports = {
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: isDevelopment
-            }
+            loader: 'sass-loader'
           }
         ]
       }
